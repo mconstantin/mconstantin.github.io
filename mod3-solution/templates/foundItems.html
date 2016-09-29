@@ -1,0 +1,17 @@
+<div class="list-group" ng-hide="itemsCtrl.items.length === 0">
+  <div class="list-group-item" ng-repeat="item in itemsCtrl.items">
+    <h4>{{item.name}} <span class="badge pull-left">{{item.short_name}}</span>
+      <button class="btn btn-sm btn-danger pull-right"
+        ng-click="itemsCtrl.onRemove({itemIndex: $index});">
+        Don't want this one
+      </button>
+    </h4>
+    <p>
+      {{item.description}}
+    </p>
+  </div>
+</div>
+
+<div class="alert alert-info" ng-if="itemsCtrl.show_empty_result">
+  <strong>Message</strong> Nothing found.
+</div>
