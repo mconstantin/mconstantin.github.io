@@ -12,7 +12,6 @@ NarrowItDownController.$inject = ['$scope', 'MenuSearchService'];
 function NarrowItDownController($scope, MenuSearchService) {
   var ctrl = this;
   ctrl.search = "";
-  // ctrl.found = [];
   ctrl.show_empty_search = false;
   ctrl.loading = false;
 
