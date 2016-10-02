@@ -10,11 +10,12 @@
       return $http.get("https://davids-restaurant.herokuapp.com/categories.json");
     };
 
-    this.getItemsForCategory = function(shortCategotyName) {
-      return $http.get({
-        url: "https://davids-restaurant.herokuapp.com/menu_items.json",
-        params: { category: shortCategotyName}
-      });
+    this.getItemsForCategory = function(shortCategoryName) {
+      return $http.get("https://davids-restaurant.herokuapp.com/menu_items.json",
+        {
+          params: { category: shortCategoryName}
+        }
+      );
     };
   }
 })();

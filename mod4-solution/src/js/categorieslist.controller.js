@@ -6,6 +6,7 @@
 
   CategoriesListController.$inject = ['items'];
   function CategoriesListController(items) {
-    this.items = items;
-  }
+    this.items = items.data;
+  };
+  
 })();

@@ -30,21 +30,18 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
       }]
     }
   })
-  //
-  // .state('itemDetail', {
-  //   url: '/item-detail/{itemId}',
-  //   templateUrl: 'src/shoppinglist/templates/item-detail.template.html',
-  //   controller: 'ItemDetailController as itemDetail',
-  //   resolve: {
-  //     item: ['$stateParams', 'ShoppingListService',
-  //           function ($stateParams, ShoppingListService) {
-  //             return ShoppingListService.getItems()
-  //               .then(function (items) {
-  //                 return items[$stateParams.itemId];
-  //               });
-  //           }]
-  //   }
-  // });
+
+  .state('categories.menuitems', {
+    url: '/menuitems/{catId}',
+    templateUrl: 'src/templates/view-menuitems.template.html',
+    controller: 'MenuItemsController as catDetail',
+    resolve: {
+      menuitems: ['$stateParams', 'MenuDataService',
+            function ($stateParams, MenuDataService) {
+              return MenuDataService.getItemsForCategory($stateParams.catId);
+            }]
+    }
+  });
 };
 
 })();
