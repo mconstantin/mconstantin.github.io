@@ -10,11 +10,11 @@
     </div>
     <div class="col-sm-2 prices">
       <div class="row" ng-if="menuitem.price_large">
-        <span class="label label-success pull-right">$12.50</span>
+        <span class="label label-success pull-right">{{menuitem.price_large | currency}}</span>
         <span>{{menuitem.large_portion_name}}</span>
       </div>
       <div class="row" ng-if="menuitem.price_small">
-        <span class="label label-info pull-right">$7.50</span>
+        <span class="label label-info pull-right">{{menuitem.price_small | currency}}</span>
         <span>{{menuitem.small_portion_name}}</span>
       </div>
     </div>
