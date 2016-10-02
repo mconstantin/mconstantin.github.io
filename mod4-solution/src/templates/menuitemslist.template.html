@@ -1,9 +1,22 @@
 <div class="list-group menu-items">
-  <div class="list-group-item" ng-repeat="menuitem in $ctrl.items">
-    <h4>{{menuitem.name}} <span class="badge pull-left">{{menuitem.short_name}} </span>
-    </h4>
-    <p>
-      {{menuitem.description}}
-    </p>
+  <div class="list-group-item row" ng-repeat="menuitem in $ctrl.items">
+    <div class="col-sm-10">
+      <h4>{{menuitem.name}}
+        <span class="badge pull-left">{{menuitem.short_name}} </span>
+      </h4>
+      <p>
+        {{menuitem.description}}
+      </p>
+    </div>
+    <div class="col-sm-2 prices">
+      <div class="row" ng-if="menuitem.price_large">
+        <span class="label label-success pull-right">$12.50</span>
+        <span>{{menuitem.large_portion_name}}</span>
+      </div>
+      <div class="row" ng-if="menuitem.price_small">
+        <span class="label label-info pull-right">$7.50</span>
+        <span>{{menuitem.small_portion_name}}</span>
+      </div>
+    </div>
   </div>
 </div>

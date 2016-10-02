@@ -4,25 +4,29 @@ body {
 }
 
 .items-panel {
-  width: 80%;
+  width: 85%;
   margin: 10px;
   padding: 10px;
   align-items:
 }
 
 .left-items {
-    width: 50%;
+    width: 40%;
     float: left;
 }
 .right-items {
-    margin-left: 10px;
-    width: 45%;
+    margin-left: 30px;
+    width: 40%;
     float: left;
 }
 
 .breadcrumbs {
   font-size: 16px;
   margin-left: 5px;
+}
+
+.prices {
+  vertical-align: center;
 }
 
 .error {
